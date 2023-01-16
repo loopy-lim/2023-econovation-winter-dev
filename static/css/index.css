@@ -1,10 +1,11 @@
 body {
   padding: 0;
   margin: 0;
+  cursor: none;
 }
 
 .full-screen {
-  height: 100vh; 
+  height: 100vh;
   width: 100vw;
 }
 
@@ -47,4 +48,31 @@ body {
 
 .w-100 {
   width: 100%;
+}
+
+.mouse {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  border-radius: 10000px;
+  background-color: black;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.mouse-delay {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: -35px;
+  top: -35px;
+  border: 2px solid;
+  border-radius: 10000px;
+  transition-property: transform;
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+  z-index: 10;
+  pointer-events: none;
 }

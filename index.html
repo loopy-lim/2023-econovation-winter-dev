@@ -11,10 +11,16 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/title.css">
   <link rel="stylesheet" href="./static/css/chapter.css">
+  <link rel="stylesheet" href="./static/css/project.css">
   <title>Winter Dev</title>
+  <script src="./static/js/svg-injector.js"></script>
 </head>
 
 <body>
+  <div class="mouse"></div>
+  <div class="mouse-delay">
+    <div class="mouse-inner"></div>
+  </div>
   <div class="full-screen scroll-overflow absolute" id="canvas-cover">
     <canvas id="canvas3d"></canvas>
   </div>
@@ -48,7 +54,7 @@
   </div>
   <div style="height: 100vh; background-color: aquamarine;"></div>
   <div class="full-screen flex justify-center items-center">
-    <div class=" chapter">
+    <div class="chapter">
       <div class="justify-center items-center h-100 argentum regular">
         <div class="chapter-people">
           <span class="chapter-small-num">01</span>
@@ -69,10 +75,145 @@
       </div>
     </div>
   </div>
+  <div class="full-screen flex justify-center items-center" style="background-color: aquamarine;"></div>
+  <div class="full-screen flex justify-center items-center" style="background-color: skyblue;"></div>
+  <div class="project">
+    <div>
+      <div class="project-title bold argentum">
+        <div>
+          ECONOVATION
+        </div>
+        <div>
+          PROJECT
+        </div>
+      </div>
+      <div class="project-subtitle nanum bold">
+        WINTER DEV 미리보기
+      </div>
+      <div class="project-description naum regular">
+        <div>
+          다양한 프로젝트 동아리 회원들은
+        </div>
+        <div>
+          학기가 시작 되면 팀을 모아 프로젝트를 진행합니다.
+        </div>
+        <div>
+          방학 때는 한 학기 프로젝트를 발표하는
+        </div>
+        <div>
+          에코노베이션만의 발표회 'DEV'를 진행합니다.
+        </div>
+      </div>
+    </div>
+    <div class="project-list naum regular">
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/The econo.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              스리남
+            </div>
+            <div class="project-people">
+              권순찬, 이서현, 이윤성, 임채승
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/Sleeper.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              복덩이들
+            </div>
+            <div class="project-people">
+              이시현, 임수미, 장현지, 황대선
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/긱허브.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              머지요정
+            </div>
+            <div class="project-people">
+              김지민, 조배경
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/Date.now().svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              에코노 응애들
+            </div>
+            <div class="project-people">
+              김가연, 박영규, 이승건
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/모여봐요 에코노 숲.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              에코노 숲 주민들
+            </div>
+            <div class="project-people">
+              경주원, 김수민, 김정은, 김종준, 김현지
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/AI COMPETITION.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              개굴
+            </div>
+            <div class="project-people">
+              김건형, 이규민, 이도연
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="full-screen flex justify-center items-center" style="background-color: skyblue;"></div>
 
   <!-- <script src="./static/js/title.mjs" type="module"></script> -->
-
+  <script>
+    const mouseDelay = document.querySelector('.mouse-delay');
+    const mouse = document.querySelector('.mouse');
+    window.addEventListener('mousemove', (e) => {
+      mouseDelay.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+      mouse.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+    });
+    window.addEventListener('wheel', (e) => {
+      mouseDelay.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+      mouse.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+    });
+  </script>
+  <script src="./static/js/project.mjs" type="module"></script>
 </body>
 
 </html>
