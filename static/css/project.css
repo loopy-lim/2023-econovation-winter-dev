@@ -34,14 +34,11 @@
 .project-list {
     overflow: auto;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .project-list::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera*/
 }
 
 .project-item {
@@ -78,7 +75,7 @@
     background: #000;
     transition-property: width fill;
     transition-duration: .8s;
-    transform: translateY(-3.5rem);
+    transform: translateY(-3.8rem);
 }
 
 .project-list>div:hover svg>path {
@@ -142,4 +139,12 @@
 .mouse-inner {
     width: 256px;
     height: 256px;
+}
+
+.clipped-img {
+    clip-path: url('#svgmask');
+}
+
+#svgmask path {
+    transition: 0.4s;
 }
