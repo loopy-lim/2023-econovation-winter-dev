@@ -2,7 +2,7 @@
     display: flex;
     padding: 20vh 7vw 0;
     width: 86vw;
-    height: 80vh;
+    height: fit-content;
 }
 
 .project>div:first-child {
@@ -29,16 +29,6 @@
 
 .project-description>div {
     margin-bottom: 8px;
-}
-
-.project-list {
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.project-list::-webkit-scrollbar {
-    display: none;
 }
 
 .project-item {

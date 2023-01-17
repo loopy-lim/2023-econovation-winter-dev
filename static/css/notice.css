@@ -1,5 +1,6 @@
 #notice {
 	justify-content: space-between;
+	overflow: hidden;
 }
 
 .notice-button:hover {

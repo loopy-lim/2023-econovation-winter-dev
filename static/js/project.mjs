@@ -1,3 +1,5 @@
+import { $, $$ } from "./utils.mjs";
+
 const projectImg = {
   0: "./static/images/theEcono_1_1.png",
   1: "./static/images/sleeper_1_1.jpg",
@@ -6,12 +8,11 @@ const projectImg = {
   4: "./static/images/esoup_1_1.png",
   5: "./static/images/gagule_1_1.png",
 };
-let direction = "";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const projectList = document.querySelectorAll(".project-list>div");
-  const mouseDelay = document.querySelector(".mouse-delay");
-  const projectImgElement = document.querySelector(".clipped-img");
+  const projectList = $$(".project-list>div");
+  const mouseDelay = $(".mouse-delay");
+  const projectImgElement = $(".clipped-img");
   
   projectList.forEach((project, index) => {
     project.addEventListener("mouseover", (e) => {
@@ -23,20 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
       mouseDelay.classList.remove("project-img");
     });
   });
-
-  let oldx = 0;
-  let oldy = 0;
-  const mousemovemethod = (e) => {
-    if (e.pageX > oldx && e.pageY == oldy) {
-      direction = "East";
-    } else if (e.pageX == oldx && e.pageY > oldy) {
-      direction = "South";
-    } else if (e.pageX == oldx && e.pageY < oldy) {
-      direction = "North";
-    } else if (e.pageX < oldx && e.pageY == oldy) {
-      direction = "West";
-    }
-  };
-
-  document.addEventListener("mousemove", mousemovemethod);
 });

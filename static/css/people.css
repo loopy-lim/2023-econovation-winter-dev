@@ -25,8 +25,13 @@
     height: 80vh;
     width: 80vh;
     border-radius: 50%;
-    background-color: aquamarine;
     margin-bottom: 20vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.people-circle >img {
+    height: 100%;
 }
 
 .people-title-cover {

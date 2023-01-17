@@ -1,5 +1,17 @@
 .title {
-  z-index: -1;
+  position: absolute;
+  pointer-events: none;
+}
+
+.title2 {
+  font-size: 1.3rem;
+  transform: translate(108.3vw, 80vh);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.title2>div {
+  margin-bottom: 0.3rem;
 }
 
 .title-text {
@@ -8,44 +20,53 @@
   letter-spacing: 6px;
   line-height: 115%;
   margin-left: 8rem;
+  pointer-events: none;
 }
 
 .title-text>div {
   overflow: hidden;
+  pointer-events: none;
 }
 
 .title-text>div>div {
   transform: translateY(100%);
+  pointer-events: none;
 }
 
 .title-text div:nth-child(1) {
   letter-spacing: 10px;
+  pointer-events: none;
 }
 
 .title-text div:nth-child(2) {
-  margin-left: 10rem;
+  transform: translate(10rem, 0);
   line-height: 95%;
+  pointer-events: none;
 }
 
 .title-text div:nth-child(3) {
-  margin-left: 32rem;
+  transform: translate(32rem, 0);
+  pointer-events: none;
 }
 
 .title-date {
   font-size: 3.5rem;
 }
 
-.title-date > div {
+.title-date>div {
   transform: translateX(-100%);
+  pointer-events: none;
 }
 
 .subtitle-text {
   font-size: 1.8rem;
   margin-top: 1rem;
+  pointer-events: none;
 }
 
-.subtitle-text > div {
+.subtitle-text>div {
   transform: translateX(-100%);
+  pointer-events: none;
 }
 
 .title-powerby-img {

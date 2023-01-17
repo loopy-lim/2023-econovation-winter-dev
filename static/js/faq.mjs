@@ -46,4 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#homepage-notice").on("click", function () {
     goLink("https://econovation.kr/about");
   });
+  $('.chapter-people').on("click", function () {
+    scrollTo({top: window.innerHeight * 2});
+  });
+  $('.chapter-time').on("click", function () {
+    scrollTo({top: window.innerHeight * 5.5});
+  });
+  $('.chapter-project').on("click", function () {
+    scrollTo({top: window.innerHeight * 6.5});
+  });
+  $('.chapter-story').on("click", function () {
+    scrollTo({top: window.innerHeight * 9});
+  });
 });

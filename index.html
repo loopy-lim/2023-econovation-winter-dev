@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
 
   <link rel="stylesheet" href="./static/css/fonts.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -15,11 +17,21 @@
   <link rel="stylesheet" href="./static/css/people.css">
   <link rel="stylesheet" href="./static/css/faq.css">
   <link rel="stylesheet" href="./static/css/notice.css">
+  <link rel="stylesheet" href="./static/css/timeline.css">
   <title>Winter Dev</title>
   <script src="./static/js/svg-injector.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+    integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
-<body>
+<body class="no-scroll">
+  <div id="loading">
+    <lottie-player src="./static/loading_lottie.json" background="transparent" speed="1"
+      style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+  </div>
   <div class="mouse"></div>
   <div class="mouse-delay">
     <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +43,7 @@
       <image class="clipped-img" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
     </svg>
   </div>
-  <div class="full-screen scroll-overflow absolute" id="canvas-cover">
+  <div class="scroll-overflow absolute full-screen" id="canvas-cover">
     <canvas id="canvas3d"></canvas>
   </div>
   <div class="full-screen title">
@@ -60,9 +72,14 @@
           <img src="./static/images/poweredbyd2.png" alt="naverD2">
         </div>
       </div>
+      <div class="title2 nanum bold" style="position: absolute;">
+        <div>팀을 이루어 협업하는 과정에서 얻은 경험들을 다른 사람들과 함께</div>
+        <div>공유하며 성장할 수 있는 네트워크를 만들기 위한 행사입니다.</div>
+      </div>
     </div>
   </div>
-  <div style="height: 100vh; background-color: aquamarine;"></div>
+  <div class="full-screen"></div>
+  <!-- <div style="height: 100vh; z-index: -1;"></div> -->
   <div class="full-screen flex justify-center items-center">
     <div class="chapter">
       <div class="justify-center items-center h-100 argentum regular">
@@ -100,13 +117,54 @@
         <div class="people-subtitle nanum regular">배움과 성장을 끊임없이 추구하는 사람</div>
       </div>
       <div class="people-circle-cover">
-        <div class="people-circle" style="transform: translateX(-10rem);"></div>
-        <div class="people-circle" style="transform: translateX(-30rem);"></div>
-        <div class="people-circle" style="transform: translateX(-6rem);"></div>
+        <div class="people-circle" style="transform: translateX(-10rem);">
+          <img src="./static/images/econovation_1.png" alt="" style="transform: translateX(-16%)">
+        </div>
+        <div class="people-circle" style="transform: translateX(-30rem);">
+          <img src="./static/images/econovation_2.png" alt="" style="transform: translateX(-23%)">
+        </div>
+        <div class="people-circle" style="transform: translateX(-6rem);">
+          <img src="./static/images/econovation_3.jpg" alt="" style="transform: translateX(-16%)">
+        </div>
       </div>
     </div>
   </div>
-  <div class="full-screen flex justify-center items-center" style="background-color: skyblue;"></div>
+  <div class="timeline full-screen flex-col">
+    <div class="argentum bold timeline-title">
+      Time
+    </div>
+    <div class="timeline-list">
+      <img src="./static/images/img_gradient_circle.png" alt="gradient_circle">
+    </div>
+    <div class="swiper nanum">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>14:00 ~ 14:20</div>
+          <div>개회식</div>
+        </div>
+        <div class="swiper-slide">
+          <div>14:20 ~ 14:30</div>
+          <div>축사</div>
+        </div>
+        <div class="swiper-slide">
+          <div>14:30~15:10</div>
+          <div>Group A</div>
+        </div>
+        <div class="swiper-slide">
+          <div>15:30 ~ 15:50</div>
+          <div>개인 세션</div>
+        </div>
+        <div class="swiper-slide">
+          <div>15:50~17:10</div>
+          <div>Group B</div>
+        </div>
+        <div class="swiper-slide">
+          <div>17:30~17:50</div>
+          <div>폐회식</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="project">
     <div>
       <div class="project-title bold argentum">
@@ -233,7 +291,7 @@
     <div class="faq-body">
       <div class="faq-separate">
         <div class="faq-q-box" id="faq-q-0">
-          <div class="faq-q-title">Summer Dev는 어떤 행사인가요?</div>
+          <div class="faq-q-title">Winter Dev는 어떤 행사인가요?</div>
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
             <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
@@ -243,14 +301,14 @@
           에코노베이션 회원들이 한 학기 동안 개발한 팀 프로젝트의 결과를 공유하고 팀을 이루어 협업하는 과정에서 성장했던 내용과 경험을 다른 사람들과 함께 공유하는 행사입니다.
         </div>
         <div class="faq-q-box" id="faq-q-1">
-          <div class="faq-q-title">Summer Dev에 참가할 수 있는 자격이 따로 있을까요?</div>
+          <div class="faq-q-title">Winter Dev에 참가할 수 있는 자격이 따로 있을까요?</div>
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
             <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
           </svg>
         </div>
         <div class="faq-a" id="faq-a-1">
-          아니요, Summer Dev에 관심있는 누구나 참가할 수 있습니다.
+          아니요, Winter Dev에 관심있는 누구나 참가할 수 있습니다.
         </div>
         <div class="faq-q-box" id="faq-q-2">
           <div class="faq-q-title">에코노베이션에 들어가면 주로 어떤 활동을 하나요?</div>
@@ -266,7 +324,7 @@
       </div>
       <div class="faq-separate">
         <div class="faq-q-box" id="faq-q-3">
-          <div class="faq-q-title">Summer Dev는 어떤 방식으로 진행되나요?</div>
+          <div class="faq-q-title">Winter Dev는 어떤 방식으로 진행되나요?</div>
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
             <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
@@ -353,22 +411,41 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./static/js/title.mjs" type="module"></script>
+  <script src="./static/js/project.mjs" type="module"></script>
+  <script src="./static/js/scroll.mjs" type="module"></script>
+  <script src="./static/js/faq.mjs" type="module"></script>
   <script>
-    const mouseDelay = document.querySelector('.mouse-delay');
-    const mouse = document.querySelector('.mouse');
-    window.addEventListener('mousemove', (e) => {
-      mouseDelay.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
-      mouse.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
-    });
-    window.addEventListener('wheel', (e) => {
-      mouseDelay.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
-      mouse.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+    // document.querySelector('.loading').addEventListener('scoll', (e) => { e.preventDefault() })
+  </script>
+  <script>
+    let ww = window.innerWidth;
+    let swiper;
+
+    initSwiper();
+
+    function initSwiper() {
+      if (typeof (swiper) == 'object') swiper.destroy();
+
+      return swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        speed: 400,
+        width: ww / 1.3,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        spaceBetween: 10,
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      ww = window.innerWidth;
+      initSwiper();
     });
   </script>
-  <script src="./static/js/project.mjs" type="module"></script>
-  <script src="./static/js/people.mjs" type="module"></script>
-  <script src="./static/js/faq.mjs" type="module"></script>
 </body>
 
 </html>

@@ -2,10 +2,18 @@
   cursor: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden !important
 }
 
 .full-screen {
@@ -74,9 +82,26 @@ body {
   top: -35px;
   border: 2px solid;
   border-radius: 10000px;
-  transition-property: transform;
-  transition-duration: .1s;
-  transition-timing-function: ease-out;
   z-index: 10;
   pointer-events: none;
+}
+
+#canvas-cover {
+  position: absolute;
+  z-index: 1;
+}
+
+#loading {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+}
+
+#loading>lottie-player {
+  transform: scale(1.5);
 }
