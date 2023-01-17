@@ -28,7 +28,7 @@ const updateTitle = () => {
   }vh) scale(${1 + ratio})`;
   title2.style.transform = `translate(calc(9.5rem + ${
     100 * (1 - ratio)
-  }vw), 80vh)`;
+  }vw), 47rem)`;
   title2.style.display = "block";
   canavs.style.opacity = 1 - 0.44 * ratio;
 };
@@ -38,7 +38,7 @@ const initTitle = () => {
   devElement.style.transform = `translate(32rem, 0);`;
   econovationElement.style.opacity = 1;
   timeElement.style.opacity = 1;
-  title2.style.transform = `translate(calc(9.5rem + 100vw), 80vh)`;
+  title2.style.transform = `translate(calc(9.5rem + 100vw), 47rem)`;
   title2.style.display = "none";
   canavs.style.opacity = 1;
 };
@@ -48,7 +48,7 @@ const afterTitle = () => {
   devElement.style.transform = `translate(36rem, 5vh) scale(2)`;
   econovationElement.style.opacity = 0;
   timeElement.style.opacity = 0;
-  title2.style.transform = `translate(9.5rem, 80vh)`;
+  title2.style.transform = `translate(9.5rem, 47rem)`;
   title2.style.display = "block";
   canavs.style.opacity = 0.44;
 };
